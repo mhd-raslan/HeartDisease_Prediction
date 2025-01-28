@@ -78,12 +78,7 @@ with open('RandomForestClassifier_heart.pkl', 'rb') as model_file:
 # Make predictions
 prediction = loaded_model.predict(scaled_data)
 
-# Output the prediction
-# if prediction[0] == 1:
-#     st.error("Prediction: Heart Disease Present")
-# else:
-#     st.success("Prediction: No Heart Disease")
-# Create a button and check for clicks  
+# Create a button and check prediction 
 if st.button("Check Heart Disease Prediction"):  
     if prediction[0] == 1:  
         st.error("Prediction: Heart Disease Present")  
